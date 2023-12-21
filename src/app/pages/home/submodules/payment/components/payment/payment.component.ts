@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
 	selector: 'app-payment',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
 	styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent {
+	@Output() cancel = new EventEmitter();
+	@Output() confirmPayment = new EventEmitter();
+
 	constructor() {}
 }
